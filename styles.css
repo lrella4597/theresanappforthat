@@ -835,6 +835,8 @@ img {
 }
 
 /* ===== Responsive ===== */
+
+/* Tablet */
 @media (max-width: 968px) {
     .hero-content:first-child {
         flex-direction: column;
@@ -846,8 +848,13 @@ img {
         width: 100%;
         max-width: 500px;
     }
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+    }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -861,17 +868,77 @@ img {
         padding: 100px 20px 60px;
     }
 
+    .hero-terminal {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .terminal-body {
+        font-size: 0.72rem;
+        line-height: 1.7;
+        min-height: 200px;
+        padding: 16px;
+    }
+
     .hero-stats {
-        flex-direction: column;
-        gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-tags {
+        flex-wrap: wrap;
     }
 
     .process-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .process-card {
+        padding: 28px 22px;
+    }
+
+    .tech-badges {
+        gap: 8px;
+    }
+
+    .tech-badges span {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+
+    .cta-block {
+        padding: 40px 0;
+    }
+
+    .cta-block::before {
+        font-size: 0.65rem;
+        word-break: break-all;
     }
 
     .footer-inner {
@@ -879,18 +946,31 @@ img {
         text-align: center;
     }
 
-    .cta-block {
-        padding: 40px 0;
+    .footer-links {
+        gap: 16px;
     }
 
-    .hero-terminal {
-        display: none;
+    /* Project embed iframe on mobile */
+    .project-embed iframe {
+        width: 300%;
+        height: 300%;
+        transform: scale(0.333);
     }
 }
 
+/* Small phone */
 @media (max-width: 480px) {
+    .hero {
+        padding: 90px 16px 48px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        margin-bottom: 28px;
     }
 
     .hero-actions {
@@ -900,5 +980,78 @@ img {
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .btn-lg {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 0.95rem;
+    }
+
+    .project-info {
+        padding: 18px;
+    }
+
+    .project-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .project-info p {
+        font-size: 0.85rem;
+    }
+
+    .cta-block h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-block p {
+        font-size: 0.95rem;
+    }
+
+    .mobile-menu {
+        font-size: 1.25rem;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+
+    .terminal-body {
+        font-size: 0.65rem;
+        min-height: 170px;
+        padding: 12px;
+    }
+
+    .syn-line-num {
+        width: 1.8em;
+        margin-right: 0.8em;
     }
 }
