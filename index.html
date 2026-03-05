@@ -14,6 +14,7 @@
     <div class="grain-overlay"></div>
     <div class="glow glow-1"></div>
     <div class="glow glow-2"></div>
+    <canvas id="code-rain" class="code-rain"></canvas>
 
     <!-- Nav -->
     <nav class="nav">
@@ -45,13 +46,28 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">AI-Powered Development Studio</div>
-            <h1>We develop apps<br><span class="gradient-text">into existence.</span></h1>
-            <p class="hero-sub">You dream it, we ship it. We use AI to build real products at lightning speed &mdash; from concept to launch.</p>
-            <div class="hero-actions">
-                <a href="#work" class="btn btn-primary">See Our Work</a>
-                <a href="#contact" class="btn btn-ghost">Start a Project</a>
+            <div class="hero-left">
+                <div class="hero-badge">AI-Powered Development Studio</div>
+                <h1>We develop apps<br><span class="gradient-text">into existence.</span></h1>
+                <p class="hero-sub">You dream it, we ship it. We use AI to build real products at lightning speed &mdash; from concept to launch.</p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">See Our Work</a>
+                    <a href="#contact" class="btn btn-ghost">Start a Project</a>
+                </div>
             </div>
+            <div class="hero-terminal">
+                <div class="terminal-chrome">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">build.js</span>
+                </div>
+                <pre class="terminal-body"><code id="typed-code"></code><span class="terminal-cursor">|</span></pre>
+            </div>
+        </div>
+        <div class="hero-content">
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number" data-target="12">0</span>
@@ -67,6 +83,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Work / Portfolio -->
@@ -81,7 +98,8 @@
             <div class="project-grid">
 
                 <a href="https://www.mydailybrief.co" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #00f0ff;">
                             <span class="placeholder-icon">&#9672;</span>
                         </div>
@@ -99,7 +117,8 @@
                 </a>
 
                 <a href="#" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #a855f7;">
                             <span class="placeholder-icon">&#9670;</span>
                         </div>
@@ -116,7 +135,8 @@
                 </a>
 
                 <a href="#" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #f43f5e;">
                             <span class="placeholder-icon">&#9671;</span>
                         </div>
@@ -133,7 +153,8 @@
                 </a>
 
                 <a href="#" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #22d3ee;">
                             <span class="placeholder-icon">&#9673;</span>
                         </div>
@@ -150,7 +171,8 @@
                 </a>
 
                 <a href="#" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #facc15;">
                             <span class="placeholder-icon">&#9674;</span>
                         </div>
@@ -167,7 +189,8 @@
                 </a>
 
                 <a href="#" class="project-card" target="_blank" rel="noopener">
-                    <div class="project-image">
+                    <div class="project-image terminal-window">
+                        <div class="terminal-chrome-mini"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
                         <div class="project-placeholder" style="--accent: #34d399;">
                             <span class="placeholder-icon">&#9679;</span>
                         </div>
